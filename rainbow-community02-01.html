@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+
+    <? include 'include/rainbow_head.html' ?>
+    <!-- 기존 레인보우사이트 text/javascript 복사 -->
+    <!-- <script type="text/javascript">
+          list 값 들어가는 곳
+        var data;
+
+        $(document).ready(function () {
+            setContent();
+
+            //외부 소스코드가 로드되는 시점에는 화면상에 태그가 없기 때문에 이벤트가 연결되지 않는다.
+            //그래서 동적으로 화면에 태그를 생성할때는 이벤트를 재바인딩 시켜줘야함
+            $.getScript('/resources/segroup/society/smtp/js/rainbow_script.js');
+
+            setEvent();
+        });
+
+        //컨텐츠 세팅
+        function setContent() {
+            getList();
+            setDataListUl();
+        }
+
+        //FAQ 리스트 가져오기
+        function getList() {
+
+            var startPage = $('#startPage').val();
+            var params = $('#searchForm').serializeObject();
+            params.startPage = startPage;
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                url: "/smtp/support/faqList",
+                data: params,
+                async: false,
+                success: function (result) {
+                    data = result;
+                }
+            });
+        }
+
+        //컨텐츠 세팅 >> 리뉴얼 사이트 태그로 적용했으나 확인 필요
+        function setDataListUl(search) {
+            var content = '';
+            if (data != null && data.length != 0) {
+                $.each(data, function (index, item) {
+                    content += '<li class="listWrap">';
+                    content += '<div class="list d-flex question">';
+                    content += '<div class="w50">' + (index + 1) + '</div>';
+                    content += '<div class="w550 textAlign_left">';
+                    content += '<span class="fc_point">';
+                    switch (item.faq_code) {
+                        case '001':
+                            content += '과정문의';
+                            break;
+                        case '002':
+                            content += '학습문의';
+                            break;
+                        case '003':
+                            content += '시스템문의';
+                            break;
+                        case '004':
+                            content += '결제문의';
+                            break;
+                    }
+                    content += '&nbsp;</span>';
+                    content += item.CONSULTING_TITLE + '</div>';
+                    content += '</div>';
+                    
+                    
+                    content += '<div class="list d-flex answer">';
+                    content += '<div class="mark w50">💡</div>';
+                    content += '<div class="w550 textAlign_left">' + item.CONSULTING_CT + '</div>';
+                    content += '</div>';
+                    content += '</li>';
+                });
+            }
+            if (content == '') {
+                content += '<li class="list not fc_999">조회된 내용이 없습니다.</li>';
+            }
+            $('#dataListUl').html(content);
+        }
+
+        function setEvent() {
+            $('#searchBtn').on('click', function () {
+                setContent();
+            });
+        }
+    </script> -->
+</head>
+
+<body>
+    <!-- community - 02. FAQ -->
+    <div class="container_rainbow">
+        <!-- rainbow_header -->
+        
+        <? include 'include/rainbow_header.html' ?>
+        <div class="content course-point05" id="main">
+            <div class="sub-content community02-01">
+                <div class="section_header">
+                    <h3 class="h3">❔ FAQ 자주하는 질문</h3>
+                    <p class="margin-top10 fc_999">
+                        궁금하신 사항은 먼저 자주하는 질문을 참고하시면 회원님의 궁금증을 빠르게 해결하실 수 있습니다.
+                    </p>
+                </div>
+                <div class="section_search">
+                    <form class="formStyle" id="searchForm" onsubmit="return false;">
+                        <div class="d-flex justify_between">
+                            <select name="searchCondition" class="select w200">
+                                <option value="all" ${search.searchCondition eq 'all' ? 'selected' :''}>제목+내용</option>
+                                <option value="title" ${search.searchCondition eq 'title' ? 'selected' :''}>제목</option>
+                                <option value="content" ${search.searchCondition eq 'content' ? 'selected' :''}>내용
+                                </option>
+                            </select>
+                            <input type="text" class="cusPHIn input margin-left10" name="searchKeyword"
+                                value="${search.searchKeyword}" placeholder="검색어를 입력해주세요.">
+                            <!-- 검색버튼 -->
+                            <button type="button" class="btn_normal img-icon search" id="searchBtn"></button>
+                            <c:if test="${startpage != '' && startpage != null}">
+                                <input type="hidden" id="startPage" name="startPage" value="${search.startPage}">
+                            </c:if>
+                            <c:if test="${startpage == '' || startpage == null}">
+                                <input type="hidden" id="startPage" name="startPage" value="1">
+                            </c:if>
+                        </div>
+                    </form>
+                </div>
+                <div class="section_table">
+                    <ul class="table-title thead d-flex fc_point">
+                        <li class="w50">No.</li>
+                        <li class="w550">제목</li>
+                    </ul>
+                    <ul class="table-list tbody" id="dataListUl">
+                        <li class="listWrap">
+                            <div class="list d-flex question">
+                                <div class="w50">1</div>
+                                <div class="w550 textAlign_left">
+                                    <span class="fc_point">[수강 취소 및 환불]&nbsp;</span>
+                                    수강취소 및 환불 방법과 교재 반품방법이 궁금합니다.
+                                </div>
+                            </div>
+                            <div class="list d-flex answer">
+                                <div class="mark w50">💡</div>
+                                <div class="w550 textAlign_left">
+                                    o 환불 규정
+                                    - 결제일로부터 7일 이내 및 진도율 10% 이하인 경우 경우 결제금액(교재비 제외) 전액 환불 가능
+                                    - 결제일로부터 7일 초과 또는 진도율 10% 초과인 경우, 아래 정책에 따라 부분 환불 가능
+                                    (1) 진도율 30% 이하 : 결제금액의 50%에 해당하는 금액 부분환불
+                                    (2) 진도율 30% 초과~50%이하 : 결제금액의 30%에 해당하는 금액 부분환불
+                                    (3) 진도율 50% 초과 : 환불액 없음
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list not fc_999">조회된 내용이 없습니다.</li>
+                    </ul>
+                </div>
+                <div class="section_pagination">
+                    <ol class="d-flex justify_center">
+                        <!-- **처음페이지로 이동 : 현재 페이지가 1보다 크면  [처음]하이퍼링크를 화면에 출력-->
+                        <c:if test="${map.boardPager.curBlock > 1}">
+                            <li class="page-item">
+                                <input class="btn_default" type="button" onclick="javascript:ilist('1')" name=""
+                                    value="&lt&lt">
+                            </li>
+                        </c:if>
+
+                        <!-- **이전페이지 블록으로 이동 : 현재 페이지 블럭이 1보다 크면 [이전]하이퍼링크를 화면에 출력 -->
+                        <c:if test="${map.boardPager.curBlock > 1}">
+                            <li class="page-item">
+                                <input class="btn_default" type="button"
+                                    onclick="javascript:ilist('${map.boardPager.prevPage}')" name="" value="&lt">
+                            </li>
+                        </c:if>
+                        <!-- **하나의 블럭에서 반복문 수행 시작페이지부터 끝페이지까지 -->
+                        <c:forEach var="num" begin="${map.boardPager.blockBegin}" end="${map.boardPager.blockEnd}">
+                            <!-- **현재페이지이면 하이퍼링크 제거 -->
+                            <c:choose>
+                                <c:when test="${num == map.boardPager.curPage}">
+                                    <li class="page-item">
+                                        <input class="btn_default fc_point" type="button" name="" value="${num}">
+                                    </li>
+                                </c:when>
+                                <c:otherwise>
+                                    <li class="page-item">
+                                        <input class="btn_default" type="button" onclick="ilist('${num}')" name=""
+                                            value="${num}">
+                                    </li>
+                                </c:otherwise>
+                            </c:choose>
+                        </c:forEach>
+                        <!-- **다음페이지 블록으로 이동 : 현재 페이지 블럭이 전체 페이지 블럭보다 작거나 같으면 [다음]하이퍼링크를 화면에 출력 -->
+                        <c:if test="${map.boardPager.curBlock <= map.boardPager.totBlock}">
+                            <li class="page-item">
+                                <input class="btn_default" type="button"
+                                    onclick="javascript:ilist('${map.boardPager.nextPage}')" name="" value="&gt">
+                            </li>
+                        </c:if>
+
+                        <!-- **끝페이지로 이동 : 현재 페이지가 전체 페이지보다 작거나 같으면 [끝]하이퍼링크를 화면에 출력 -->
+                        <c:if test="${map.boardPager.curPage <= map.boardPager.totPage}">
+                            <li class="page-item">
+                                <input class="btn_default" type="button"
+                                    onclick="javascript:ilist('${map.boardPager.totPage}')" name="" value="&gt&gt">
+                            </li>
+                        </c:if>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <? include 'include/rainbow_footer.html' ?>
+    </div>
+</body>
+<script type="text/javascript">
+    // community nav active
+    // navLinks[4].parentElement.classList.add('current')
+    // subNav[4].classList.add('active');
+
+    // FAQ 
+    const slideTarget = document.querySelectorAll(".question");
+    const hideTarget = document.querySelectorAll(".answer");
+    const toggleTarget = document.querySelectorAll('.angle-down');
+    slideTarget.forEach(function (question) {
+        function slideEvent() {
+            const answer = this.nextElementSibling;
+            if (!answer.classList.contains('show')) {
+                hideAnswer(hideTarget)
+                answer.classList.toggle('show');
+            } else {
+                answer.classList.remove('show');
+            }
+            //FAQ 질문 클릭 시, 전체 답변 숨기기
+            function hideAnswer(hideTarget) {
+                if (hideTarget) {
+                    for (var i = 0; i < hideTarget.length; i++) {
+                        hideTarget[i].classList.remove('show');
+                    }
+                }
+            }
+        }
+        question.addEventListener("click", slideEvent);
+    })
+</script>
+
+</html>

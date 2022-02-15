@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <? include 'include/rainbow_head.html' ?>
+    <!-- 기존 레인보우사이트 text/javascript 복사 -->
+    <!-- <script type="text/javascript">
+        $(function () {
+			$("#onlineConsultingWrite").on("click",function(){
+				if ('${consulting_ins_id}' == ''){
+					var check = confirm("로그인 후 이용가능합니다. 로그인 하시겠습니까?");
+					if(!check){
+						return false;
+					}
+					location.href="/smtp/user/sub01-01.do"
+					return true;
+				} else {
+					write_form();
+				}
+			});
+		});
+	
+		function ilist(page){
+		    location.href="/smtp/support/sub04-04.do?curPage="+page+"&searchOption=${map.searchOption}"+"&keyword=${map.keyword}";
+		}
+	
+		function goOnline_consulting_Detail(consulting_seq){
+			location.href="/smtp/support/sub04-04-01.do?consulting_seq="+consulting_seq;
+		}
+	
+		function goOnline_consulting_closed(){
+			alert("비공개 글 입니다.");
+		}
+	
+		function searchList(){
+			
+		    location.href="/smtp/support/sub04-04.do?curPage="+page+"&searchOption=${map.searchOption}"+"&keyword=${map.keyword}";
+		}
+	
+		function mySelection(){
+			 $('input[id="searchOption"]').val(document.getElementById("mySelect").value);
+		}
+	
+		function search(){
+			  var searchword=document.getElementById("searchword").value;
+			  var searchoption=document.getElementById("searchOption").value;
+			  if(searchoption==""){
+				  searchoption="contents";
+			  }
+			
+			  location.href="/smtp/support/sub04-04.do?searchOption="+searchoption+"&keyword="+searchword;
+		}
+	
+		function write_form(){
+			location.href="/smtp/support/sub04-04-02.do";
+		}
+    </script> -->
+</head>
+
+<body>
+    <!-- community - 03. Q&A -->
+    <div class="container_rainbow">
+        <!-- rainbow_header -->
+        <? include 'include/rainbow_header.html' ?>
+        <div class="content course-point05" id="main">
+            <div class="sub-content community02-01">
+                <div class="section_header">
+                    <h3 class="h3">❔ QnA</h3>
+                    <p class="margin-top10 fc_999">
+                        궁금한 것이 있다면 무엇이든지 물어보세요!
+                    </p>
+                </div>
+                <div class="section_search">
+                    <form class="formStyle" id="searchForm" onsubmit="return false;">
+                        <div class="d-flex justify_between">
+                            <select name="searchCondition" class="select w200">
+                                <option value="all" ${search.searchCondition eq 'all' ? 'selected' :''}>제목+내용</option>
+                                <option value="title" ${search.searchCondition eq 'title' ? 'selected' :''}>제목</option>
+                                <option value="content" ${search.searchCondition eq 'content' ? 'selected' :''}>내용
+                                </option>
+                            </select>
+                            <input type="text" class="cusPHIn input margin-left10" name="searchKeyword"
+                                value="${search.searchKeyword}" placeholder="검색어를 입력해주세요.">
+                            <!-- 검색버튼 -->
+                            <button type="button" class="btn_normal img-icon search" id="searchBtn"></button>
+                            <c:if test="${startpage != '' && startpage != null}">
+                                <input type="hidden" id="startPage" name="startPage" value="${search.startPage}">
+                            </c:if>
+                            <c:if test="${startpage == '' || startpage == null}">
+                                <input type="hidden" id="startPage" name="startPage" value="1">
+                            </c:if>
+                        </div>
+                    </form>
+                </div>
+                <div class="section_table">
+                    <ul class="table-title thead d-flex fc_point">
+                        <li class="w50">답변<br>상태</li>
+                        <li class="w400">문의제목</li>
+                        <li class="w100">작성자</li>
+                        <li class="w50">공개<br>여부</li>
+                    </ul>
+                    <ul class="table-list tbody" id="dataListUl">
+                        <li class="list d-flex question" onclick="location.href='rainbow-community03-02.html'">
+                            <div class="w50">대기</div>
+                            <div class="w400">
+                                수강취소 및 환불 방법과 교재 반품방법이 궁금합니다.
+                            </div>
+                            <div class="w100">작성자</div>
+                            <div class="w50">비공개</div>
+                        </li>
+                        <li class="list not fc_999">조회된 내용이 없습니다.</li>
+                        <li class="list not fc_999">
+                            등록된 게시글이 없습니다.
+                        </li>
+                    </ul>
+                </div>
+                <div class="section_pagination">
+                    <ol class="d-flex justify_center">
+                        <!-- **처음페이지로 이동 : 현재 페이지가 1보다 크면  [처음]하이퍼링크를 화면에 출력-->
+                        <c:if test="${map.boardPager.curBlock > 1}">
+                            <li class="page-item">
+                                <input class="btn_default" type="button" onclick="javascript:ilist('1')" name=""
+                                    value="&lt&lt">
+                            </li>
+                        </c:if>
+
+                        <!-- **이전페이지 블록으로 이동 : 현재 페이지 블럭이 1보다 크면 [이전]하이퍼링크를 화면에 출력 -->
+                        <c:if test="${map.boardPager.curBlock > 1}">
+                            <li class="page-item">
+                                <input class="btn_default" type="button"
+                                    onclick="javascript:ilist('${map.boardPager.prevPage}')" name="" value="&lt">
+                            </li>
+                        </c:if>
+                        <!-- **하나의 블럭에서 반복문 수행 시작페이지부터 끝페이지까지 -->
+                        <c:forEach var="num" begin="${map.boardPager.blockBegin}" end="${map.boardPager.blockEnd}">
+                            <!-- **현재페이지이면 하이퍼링크 제거 -->
+                            <c:choose>
+                                <c:when test="${num == map.boardPager.curPage}">
+                                    <li class="page-item">
+                                        <input class="btn_default fc_point" type="button" name="" value="${num}">
+                                    </li>
+                                </c:when>
+                                <c:otherwise>
+                                    <li class="page-item">
+                                        <input class="btn_default" type="button" onclick="ilist('${num}')" name=""
+                                            value="${num}">
+                                    </li>
+                                </c:otherwise>
+                            </c:choose>
+                        </c:forEach>
+                        <!-- **다음페이지 블록으로 이동 : 현재 페이지 블럭이 전체 페이지 블럭보다 작거나 같으면 [다음]하이퍼링크를 화면에 출력 -->
+                        <c:if test="${map.boardPager.curBlock <= map.boardPager.totBlock}">
+                            <li class="page-item">
+                                <input class="btn_default" type="button"
+                                    onclick="javascript:ilist('${map.boardPager.nextPage}')" name="" value="&gt">
+                            </li>
+                        </c:if>
+
+                        <!-- **끝페이지로 이동 : 현재 페이지가 전체 페이지보다 작거나 같으면 [끝]하이퍼링크를 화면에 출력 -->
+                        <c:if test="${map.boardPager.curPage <= map.boardPager.totPage}">
+                            <li class="page-item">
+                                <input class="btn_default" type="button"
+                                    onclick="javascript:ilist('${map.boardPager.totPage}')" name="" value="&gt&gt">
+                            </li>
+                        </c:if>
+                    </ol>
+                </div>
+
+                <!-- 글쓰기 버튼 추가 -->
+                <div class="section_btnWrap d-flex justify_center">
+                    <input type="button" name="onlineConsultingWrite" id="onlineConsultingWrite" class="btn_normal btn_xlarge bgc_point" value="글쓰기" onclick="location.href='rainbow-community03-03.html'">
+                </div>
+            </div>
+        </div>
+        <? include 'include/rainbow_footer.html' ?>
+    </div>
+</body>
+<script type="text/javascript">
+    // community nav active
+    navLinks[4].parentElement.classList.add('current')
+    subNav[4].classList.add('active');
+
+    // FAQ 
+    const slideTarget = document.querySelectorAll(".question");
+    const hideTarget = document.querySelectorAll(".answer");
+    const toggleTarget = document.querySelectorAll('.angle-down');
+    slideTarget.forEach(function (question) {
+        function slideEvent() {
+            const answer = this.nextElementSibling;
+            if (!answer.classList.contains('show')) {
+                hideAnswer(hideTarget)
+                answer.classList.toggle('show');
+            } else {
+                answer.classList.remove('show');
+            }
+            //FAQ 질문 클릭 시, 전체 답변 숨기기
+            function hideAnswer(hideTarget) {
+                if (hideTarget) {
+                    for (var i = 0; i < hideTarget.length; i++) {
+                        hideTarget[i].classList.remove('show');
+                    }
+                }
+            }
+        }
+        question.addEventListener("click", slideEvent);
+    })
+</script>
+
+</html>

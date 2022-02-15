@@ -1,0 +1,65 @@
+<div class="course_recommend" id="course_recommend">
+    <div class="courseFilterWrap swiper-container">
+        <ul class="courseList swiper-wrapper">
+            <li class="cs_tlc swiper-slide">
+                <a href="rainbow-course02-02.html">
+                    <div class="courseImg">
+                        <img src="/img/course02-02.jpg" alt="구직자를 위한 NON-STOP 취업프로그램! JAVA기반 웹개발자 과정">
+                        <div class="animateTxt bgc_point01 fc_fff">마감임박!</div>
+                    </div>
+                    <div class="courseTxt fz16">
+                        <div class="fc_666">[서울] 풀스택 개발(JAVA 웹 개발</div>
+                        <div class="fc_666">환급 국비지원</div>
+                        <div class="fc_999">[온/오프라인] 서울 강남구 코엑스</div>
+                    </div>
+                </a>
+            </li>
+            <li class="cs_tlc swiper-slide">
+                <a href="rainbow-course02-01.html">
+                    <div class="courseImg">
+                        <img src="/img/course02-01.jpg" alt="구직자를 위한 NON-STOP 취업프로그램! 파이썬 기초 과정">
+                        <div class="animateTxt bgc_point01 fc_fff">마감임박!</div>
+                    </div>
+                    <div class="courseTxt fz16">
+                        <div class="fc_666">[서울] 데이터 분석(파이썬 기초)</div>
+                        <div class="fc_666">환급 국비지원</div>
+                        <div class="fc_999">[온/오프라인] 서울 강남구 코엑스</div>
+                    </div>
+                </a>
+            </li>
+            <li class="cs_ict swiper-slide">
+                <a href="rainbow-course01-04.html">
+                    <div class="courseImg"><img src="/img/course01-04.jpg" alt="미국 유급 인턴십 취업과정 OPEN! 미국 디지털커머스 인재양성">
+                    </div>
+                    <div class="courseTxt fz16">
+                        <div class="fc_666">[광주] 미국 디지털 커머스 인재양성</div>
+                        <div class="fc_666">SW/AI 해외취업연계과정</div>
+                        <div class="fc_999">[온/오프라인] 광주광역시 광주무역회관</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+<script>
+    var swiper = new Swiper(".course_recommend .courseFilterWrap", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        centeredSlides: true,
+        breakpoints: {
+            1024: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            }
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+        }
+    });
+</script>

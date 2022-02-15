@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <? include 'include/rainbow_head.html' ?>
+</head>
+
+<body>
+    <div class="container_rainbow">
+        <!-- rainbow_popup -->
+        <!-- <? include 'include/rainbow_popup.html' ?> -->
+
+        <!-- rainbow_header -->
+        <? include 'include/rainbow_header.html' ?>
+        <div class="content index" id="main">
+            <!-- 메인배너 -->
+            <? include 'include/banner_main.html' ?>
+            <!-- <div class="mainBackVideoWrap" onclick="togglePlay()">
+                <div class="background_video video_main">
+                    <video src="video/01main_Earth.mp4" width='100%' autoplay loop muted></video>
+                    <div class="opacity_bg op08">
+                        <div class="bannerTextWrap fz20 fc_fff">
+                            <div class="fc_point03">Blended-rainbow Program</div>
+                            <h2 class="h2">디지털 융합 인재양성</h2>
+                            <p class="op06 margin-top20">
+                                “Design convergence talent”<br>Fostering multiple intelligences in design convergence
+                                talents.
+                            </p>
+                            <div class="margin-top20">다양한 전공과 ICT·AI를 융합하여 K-Digital 인재로 컬러링 해드립니다.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rainbow-sideBg bg01 rightSide"></div>
+            </div> -->
+            <div class="recommendContainer">
+                <div class="recommendWrapper">
+                    <div class="textWrap">
+                        <h3 class="h3">📌 Soft Engineer Society 추천과정</h3>
+                    </div>
+                    <div class="recommendWrap d-flex">
+                        <!-- <div class="recommendMain fc_fff" style="background-color: #FF8F9F;">
+                            <div class="recommendTxt">
+                                <div>추천과정</div>
+                                <h3 class="h3">고민하지 말고<br>Soft Engineer Society와 함께해요!</h3>
+                            </div>
+                            <div class="recommendImg">
+                                <img src="/img/recommend01.png" alt="손하트 이미지">
+                            </div>
+                        </div> -->
+                        <!-- <div class="recommendMain fc_fff" style="background-color: #FF6D0B;">
+                            <div class="recommendTxt">
+                                <div>전액 국비지원 무료 과정</div>
+                                <h3 class="h3">
+                                    <div>[광주] SWDO 마스터 과정</div>
+                                    <div class="margin-top10">글로벌 S/W 해외취업을 AI특구 광주에서!</div>
+                                </h3>
+                            </div>
+                            <div class="recommendImg">
+                                <img src="/img/recommend02.png" alt="태블릿 이미지">
+                            </div>
+                        </div> -->
+                        <div class="recommendMain fc_fff" style="background-color: #FF6D0B;">
+                            <a href="/smtp/course/new-rainbow/course?course_id=c000000526">
+                                <div class="recommendImg" style="width: 260px; margin: 10px auto">
+                                    <img src="/img/course01-02.jpg" alt="글로벌 S/W 해외취업을 AI특구 광주에서! SWDO마스터 과정">
+                                </div>
+                                <div class="recommendTxt" style="padding: 0 10px; text-align: center;">
+                                    <div>[광주] SWDO 마스터 과정</div>
+                                    <div class="h3" style="padding: 5px 0; background-color: #000;">
+                                        <div>전액 국비지원 무료 과정</div>
+                                    </div>
+                                    <div class="margin-top10 fz16">일본 IT취업의 꿈,<br> 현실로 이루어 드립니다.</div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 추천과정 -->
+                        <!-- <? include 'include/course_recommend.html' ?> -->
+                        <div class="course_recommend" id="course_recommend">
+                            <div class="courseFilterWrap swiper-container">
+                                <ul class="courseList swiper-wrapper">
+                                    <li class="cs_tlc swiper-slide">
+                                        <a href="rainbow-course02-02.html">
+                                            <div class="courseImg"><img src="/img/course02-02.jpg"
+                                                    alt="구직자를 위한 NON-STOP 취업프로그램! JAVA기반 웹개발자 과정">
+                                                <div class="animateTxt bgc_point01 fc_fff">마감임박!</div>
+                                            </div>
+                                            <div class="courseTxt fz16">
+                                                <div class="fc_666">[서울] 풀스택 개발(JAVA 웹 개발</div>
+                                                <div class="fc_666">환급 국비지원</div>
+                                                <div class="fc_999">[온/오프라인] 서울 강남구 코엑스</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="cs_tlc swiper-slide">
+                                        <a href="rainbow-course02-01.html">
+                                            <div class="courseImg"><img src="/img/course02-01.jpg"
+                                                    alt="구직자를 위한 NON-STOP 취업프로그램! 파이썬 기초 과정">
+                                            </div>
+                                            <div class="courseTxt fz16">
+                                                <div class="fc_666">[서울] 데이터 분석(파이썬 기초)</div>
+                                                <div class="fc_666">환급 국비지원</div>
+                                                <div class="fc_999">[온/오프라인] 서울 강남구 코엑스</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="cs_ict swiper-slide">
+                                        <a href="rainbow-course01-04.html">
+                                            <div class="courseImg"><img src="/img/course01-04.jpg"
+                                                    alt="미국 유급 인턴십 취업과정 OPEN! 미국 디지털커머스 인재양성">
+                                            </div>
+                                            <div class="courseTxt fz16">
+                                                <div class="fc_666">[광주] 미국 디지털 커머스 인재양성</div>
+                                                <div class="fc_666">SW/AI 해외취업연계과정</div>
+                                                <div class="fc_999">[온/오프라인] 광주광역시 광주무역회관</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                        <script>
+                            var swiper = new Swiper(".course_recommend .courseFilterWrap", {
+                                slidesPerView: 1,
+                                spaceBetween: 10,
+                                loop: true,
+                                centeredSlides: true,
+                                breakpoints: {
+                                    1024: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 10,
+                                    },
+                                    1200: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 10,
+                                    }
+                                },
+                                navigation: {
+                                    nextEl: ".swiper-button-next",
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="courseContainer">
+                <div class="courseWrapper">
+                    <div class="courseWrap textAlign_center">
+                        <div class="textWrap">
+                            <!-- <h2 class="h2">Blended-rainbow Program 모집과정</h2> -->
+                            <h2 class="h2">Soft Engineer Society 모집과정</h2>
+                            <p class="fz20">다양한 전공의 인재를 21세기형 ICT융합인재로 양성하여 해외 유수의 기업에서 활동할 기회를 제공하고,<br>기업 및 산업계간의 글로벌
+                                협력을
+                                통하여 새로운 가치를 창출하는 네트워크를 확대해 가는 것을 목표로 합니다.</p>
+                        </div>
+
+                        <div class="courseListWrap d-flex flexWrap">
+                            <div class="course bgc_point01">
+                                <div class="courseTitle">
+                                    <div class="img-icon globe-stand"></div>
+                                    <div>
+                                        <p class="h5">무료 국비지원</p>
+                                        해외취업연계과정
+                                    </div>
+                                </div>
+                                <ul class="courseList fc_333">
+                                    <li><a href="rainbow-course01-03.html">[부산] Digital ABC MASTER</a></li>
+                                    <li><a href="rainbow-course01-02.html">[광주] SoftWare DevOps MASTER</a></li>
+                                    <li><a href="rainbow-course01-04.html">[광주] 미국 디지털 커머스 인재양성</a></li>
+                                </ul>
+                                <div class="btn_moreList">
+                                    <a href="rainbow-course01.html">과정 더 보기 &nbsp;&gt;</a>
+                                </div>
+                            </div>
+                            <div class="course bgc_point02">
+                                <div class="courseTitle">
+                                    <div class="img-icon laptop-code"></div>
+                                    <div>
+                                        <p class="h5">환급 국비지원</p>
+                                        취업연계과정
+                                    </div>
+                                </div>
+                                <ul class="courseList fc_333">
+                                    <li><a href="rainbow-course02-02.html">[서울] 풀스택 개발(JAVA 웹 개발)</a></li>
+                                    <li><a href="rainbow-course02-01.html">[서울] 데이터 분석(파이썬 기초)</a></li>
+                                    <li><a href="rainbow-course02-04.html">[광주] 풀스택 개발(JAVA 웹 개발)</a></li>
+                                    <li><a href="rainbow-course02-03.html">[광주] 데이터 분석(파이썬 기초)</a></li>
+                                </ul>
+                                <div class="btn_moreList">
+                                    <a href="rainbow-course02.html">과정 더 보기 &nbsp;&gt;</a>
+                                </div>
+                            </div>
+
+                            <!-- <div class="course bgc_point03">
+                                <div class="courseTitle">
+                                    <div class="img-icon lightbulb"></div>
+                                    <div>
+                                        <p class="h5">국비지원</p>
+                                        직무역량강화
+                                    </div>
+                                </div>
+                                <ul class="courseList fc_333">
+                                    <li><a href="rainbow-course03-02.html">코딩 한 줄 없는 머신러닝 활용하기</a></li>
+                                    <li><a href="rainbow-course03-03.html">R을 이용한 데이터 분석</a></li>
+                                    <li><a href="rainbow-course03-04.html">R을 이용한 데이터 시각화</a></li>
+                                </ul>
+                                <div class="btn_moreList">
+                                    <a href="rainbow-course03.html">과정 더 보기 &nbsp;&gt;</a>
+                                </div>
+                            </div> -->
+                            <div class="course bgc_point04">
+                                <div class="courseTitle">
+                                    <div class="img-icon chalkboard-teacher"></div>
+                                    <div>단기과정</div>
+                                </div>
+                                <ul class="courseList fc_333">
+                                    <li><a href="rainbow-course01-01.html">코딩챌린지(사전학습반)</a></li>
+                                    <!-- <li><a href="rainbow-course04-01.html">일본어 기초회화</a></li> -->
+                                </ul>
+                                <div class="btn_moreList">
+                                    <a href="rainbow-course04.html">과정 더 보기 &nbsp;&gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_allList">
+                            <a href="course-list.html">전체 과정 보기 &nbsp;&gt;</a>
+                        </div>
+                    </div>
+                    <? include 'include/banner_add.html' ?>
+
+                </div>
+                <!-- <div class="rainbow-sideBg bg02 rightSide"></div> -->
+            </div>
+            <div class="companyAwardsWrapper" id="awards">
+                <div class="companyAwardsWrap">
+                    <div class="textWrap textAlign_center">
+                        <h2 class="h2">Soft Engineer Society 수상실적</h2>
+                    </div>
+                    <ul class="companyAwards d-flex">
+                        <li class="awards">
+                            <div class="awardsImg">
+                                <img src="/img/awards01.png" alt="한국산업인력공단 K-MOVE스쿨 해외취업 연수기관 A등급">
+                            </div>
+
+                            <div class="awardsTxt fz20">한국산업인력공단 K-MOVE스쿨<br>해외취업 연수기관 A등급 선정</div>
+                        </li>
+                        <li class="awards">
+                            <div class="awardsImg">
+                                <img src="/img/awards02.png" alt="과학기술정보통신부 지정 SW전문인력 양성기관">
+                            </div>
+                            <div class="awardsTxt fz20">과학기술정보통신부<br>SW전문인력 양성기관 선정</div>
+                        </li>
+                        <li class="awards">
+                            <div class="awardsImg">
+                                <img src="/img/awards03.png" alt="ICT해외진출 인재양성과정 20년 운영기관">
+                            </div>
+                            <div class="awardsTxt fz20">한국무역협회 컨소시움으로<br>ICT해외진출 인재양성과정 20년간 운영</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rainbow-sideBg bg02 rightSide"></div>
+            </div>
+
+            <div class="companyIntroWrapper">
+                <div class="companyIntroWrap">
+                    <div class="textWrap textAlign_center">
+                        <h2 class="h2">Soft Engineer Society는<br>다양한 전공의 인재들을 ICT와 융합, 글로벌 인재를 양성합니다.</h2>
+                    </div>
+                    <div class="companyIntro d-flex flexWrap margin-top40">
+                        <video src="video/softsociety.mp4" controls></video>
+                        <div class="introWrap">
+                            <ul class="intro">
+                                <li class="fz20">21세기형 융복합 ICT 인재 양성</li>
+                                <li>과학기술정보통신부 지정 SW전문인력양성기관 지정</li>
+                                <li>한국무역협회 컨소시움, 해외진출 ICT 인재양성과정 운영(Since2001)</li>
+                            </ul>
+                            <ul class="intro">
+                                <li class="fz20">글로벌 인프라 구축</li>
+                                <li>한일간 ICT 인재교류회 사무국 운영</li>
+                                <li>공인시험센터 운영 : 토익, 토플, 오픽</li>
+                                <li>해외위탁기업 제휴 교육 운영 및 관리</li>
+                            </ul>
+                            <ul class="intro">
+                                <li class="fz20">전문분야</li>
+                                <li>ICT 인재양성(온·오프라인 교육, 강의)</li>
+                                <li>영어/일본어 비즈니스 랭귀지 코스 운영</li>
+                                <li>해외취업연계, 기업지원 컨설팅, 취업특강 등</li>
+                                <li>평생교육시설운영(ICT지식, 인력개발)</li>
+                            </ul>
+                            <ul class="intro">
+                                <li class="fz20">국내·외 ICT 인재 기업 매칭</li>
+                                <li>해외취업 플랫폼 구축, 채용시스템 운영(Find Job System)</li>
+                                <li>일본 도쿄 잡페어 정례 개최 및 운영(약 1,800명 해외 진출)</li>
+                                <li>산업인력공단 지정 해외 취업 우수기관(2015 ~ 현재)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="rainbow-sideBg bg03 leftSide"></div>
+            </div>
+
+            <div class="managementWrapper">
+                <div class="managementWrap textAlign_center">
+                    <div class="textWrap">
+                        <h2 class="h2">여러분의 취업을 응원합니다.</h2>
+                    </div>
+                    <div class="d-flex flexWrap fz20">
+                        <div class="management">
+                            <div class="picture img-icon user-blank"><img src="img/character01.jpg"
+                                    alt="웹-빅데이터 전문 교수진 이종호"></div>
+                            <p class="mainTxt">
+                                비전공자, 전공자 구분 없이 디지털 트레이닝 과정들을 통해
+                                프로그래머로서의 도전을 이루어 드리겠습니다.
+                            </p>
+                            <div class="writer">
+                                <span class="fc_point05">웹-빅데이터 전문 교수진</span> 이종호
+                            </div>
+                        </div>
+                        <div class="management">
+                            <div class="picture img-icon user-blank">
+                                <img src="img/character02.jpg" alt="글로벌 취업팀 나가오 히사미 차장">
+                            </div>
+                            <p class="mainTxt">
+                                20년간 쌓아온 약 200여 개의 기업 데이터를 통해
+                                빠른 취업이 가능하도록 철저히 지도해 드리겠습니다.
+                            </p>
+                            <div class="writer">
+                                <span class="fc_point02">글로벌 취업팀</span> 나가오 히사미 차장
+                            </div>
+                        </div>
+                        <div class="management">
+                            <div class="picture img-icon user-blank"><img src="img/character03.jpg"
+                                    alt="학사관리 및 운영 이혜림 대리"></div>
+                            <p class="mainTxt">
+                                단기간 최대한의 역량 집중을 위해 전문 학사운영관리를 받으세요. 책임지고 역량 강화를 시켜드립니다.
+                            </p>
+                            <div class="writer">
+                                <span class="fc_point06">학사관리 및 운영</span> 이혜림 대리
+                            </div>
+                        </div>
+                        <div class="management">
+                            <div class="picture img-icon user-blank"><img src="img/character04.jpg"
+                                    alt="[광주] SoftWare DevOps Master 3기 졸업생 정O희"></div>
+                            <p class="mainTxt">
+                                졸업과 동시에 취업 확정되어 정말 기쁘네요.
+                                비전공자라 많이 불안했지만 과정을 통해 해외 IT기업에 합격하였습니다.
+                            </p>
+                            <div class="writer">
+                                <h4 class="h4">[광주] SoftWare DevOps Master</h4>
+                                3기 수료생 정O희
+                            </div>
+                        </div>
+                        <div class="management">
+                            <div class="picture img-icon user-blank"><img src="img/character05.jpg"
+                                    alt="[서울] 파이썬 단기과정 11기 수료생 이O호"></div>
+                            <p class="mainTxt">
+                                약 두 달 동안 하루 6시간씩 실습 위주의 프로그래밍
+                                수업을 통해 직관적인 이해가 되어 실무 사용이
+                                가능하게 되었습니다.
+                            </p>
+                            <div class="writer">
+                                <h4 class="h4">[서울] 데이터 분석(파이썬 기초)</h4>
+                                11기 수료생 이O호
+                            </div>
+                        </div>
+                        <div class="management">
+                            <div class="picture img-icon user-blank"><img src="img/character05.jpg"
+                                    alt="미국 인턴십 2기 수료생 김O상"></div>
+                            <p class="mainTxt">
+                                여러 기관을 비교해보고 입학한 결과 IT와 비즈니스 영어를 둘 다 잡을 수 있었습니다.
+                            </p>
+                            <div class="writer">
+                                <h4 class="h4">미국 인턴십</h4>
+                                2기 수료생 김O상
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rainbow-sideBg bg04 rightSide"></div>
+            </div>
+            <? include 'include/banner_full.html' ?>
+
+            <div class="partnerWrapper">
+                <div class="partnerWrap">
+                    <div class="textWrap textAlign_center">
+                        <h2 class="h2">Soft Engineer Society와 함께하는 파트너</h2>
+                        <p class="fz20">Soft Engineer Society는 다양한 글로벌 기업들과의 협력을 통하여 새로운 가치 창출을 목표로 합니다.</p>
+                    </div>
+                    <ul class="partner d-flex flexWrap">
+                        <li class="partnerImg"><img src="img/img-logo_01.png" alt="한국무역협회 무역아카데미"></li>
+                        <li class="partnerImg"><img src="img/img-logo_02.png" alt="한국산업인력공단"></li>
+                        <li class="partnerImg"><img src="img/img-logo_03.png" alt="고용노동부"></li>
+                        <li class="partnerImg"><img src="img/img-logo_04.png" alt="과학기술정보통신부"></li>
+                        <li class="partnerImg"><img src="img/img-logo_05.png" alt="광주광역시"></li>
+                        <li class="partnerImg"><img src="img/img-logo_06.png" alt="한국산업기술대학교"></li>
+                        <li class="partnerImg"><img src="img/img-logo_07.png" alt="전남대학교"></li>
+                        <li class="partnerImg"><img src="img/img-logo_08.png" alt="호남대학교"></li>
+                        <li class="partnerImg"><img src="img/img-logo_09.png" alt="조선대학교"></li>
+                        <li class="partnerImg"><img src="img/img-logo_10.png" alt="Rakuten"></li>
+                        <li class="partnerImg"><img src="img/img-logo_11.png" alt="IBM"></li>
+                        <li class="partnerImg"><img src="img/img-logo_12.png" alt="Amazon"></li>
+                        <li class="partnerImg"><img src="img/img-logo_13.png" alt="SoftBank"></li>
+                        <li class="partnerImg"><img src="img/img-logo_14.png" alt="Shima Seiki"></li>
+                        <li class="partnerImg"><img src="img/img-logo_15.png" alt="Cocone"></li>
+                        <li class="partnerImg"><img src="img/img-logo_16.png" alt="Kissco"></li>
+                    </ul>
+                </div>
+                <div class="rainbow-sideBg bg05 leftSide"></div>
+            </div>
+        </div>
+        <? include 'include/rainbow_footer.html' ?>
+    </div>
+
+</body>
+
+</html>

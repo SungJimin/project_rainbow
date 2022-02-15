@@ -1,0 +1,724 @@
+@charset "UTF-8";
+/* ----------------------------------------------------------------
+  >> TABLE OF CONTENTS:                   담당자 : 성지민
+
+	[1] pc 1024px - 1920px >> 기준 1200px
+
+	[2] 태블릿 768px - 1023px >> 기준 730px
+
+    [3] 모바일  320px - 767px >> 기준 300px
+----------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+  [1] pc 1024px - 1920px >> 기준 1200px
+----------------------------------------------------------------*/
+@media(max-width:1920px) {
+    .rainbow-sideBg {
+        width: calc(320px / 2);
+    }
+}
+
+@media(max-width:1600px) {
+    .rainbow-sideBg {
+        display: none;
+    }
+}
+
+@media(max-width:1400px) {
+    .floating-img {
+        display: none;
+    }
+}
+
+@media(max-width:1200px) {
+
+    .header,
+    .header,
+    .fullWrapper>.full-navGroup,
+    .subHeaderWrap>.subHeader,
+    .fullWrapper>.full-navGroup,
+    .courseWrapper>.courseWrap,
+    .companyAwardsWrapper>.companyAwardsWrap,
+    .companyIntroWrapper>.companyIntroWrap,
+    .managementWrapper>.managementWrap,
+    .partnerWrapper>.partnerWrap,
+    .adBannerWrapper,
+    .footerWrap>.footer,
+    .mainBackVideoWrap>.background_video>.opacity_bg>.bannerTextWrap,
+    .detail-menuWrapper>.d-flex,
+    .course-detail-container,
+    .course-navWrap>.d-flex,
+    .sub-content,
+    .course-applyContainer,
+    .mainBannerWrapper .mainBanner a>.d-flex,
+    .mainBannerWrapper .mainBanner>.d-flex,
+    .subSectionContainer .subSectionWrapper .subSectionTitle,
+    .subSectionWrap .subSection {
+        width: calc(100% - 40px);
+        min-width: 320px;
+    }
+    .footerWrap .footer_logoWrap,
+    .footerWrap .footer_copyWrap,
+    .course-navWrap,
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro {
+        display: block;
+    }
+
+    .course-detail-container>.course-applyWrap,
+    .course-applyContainer>.resumeAside {
+        display: none;
+    }
+
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro>.introWrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .companyAwardsWrapper>.companyAwardsWrap>.companyAwards,
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro>.introWrap {
+        -webkit-box-lines: multiple;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .course-detail-container,
+    .course-curriculumWrap>.curriculum>.curriculum-boxWrap,
+    .course-applyContainer,
+    .footerWrap .footer_copyWrap .intro  {
+        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    }
+
+    .footerWrap .footer_navWrap>.footerNav>.gnb,
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro>video,
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro>.introWrap {
+        width: 100%;
+    }
+
+    .mainBannerWrapper .mainBanner a>.d-flex {
+        width: calc(100% - 100px);
+    }
+    .recommendContainer .recommendWrapper, 
+    .courseWrapper>.courseWrap .courseFilterWrap>.courseList,
+    .companyAwardsWrapper>.companyAwardsWrap>.companyAwards,
+    .managementWrapper>.managementWrap>.d-flex,
+    .partnerWrapper>.partnerWrap>.partner,
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro,
+    .courseWrapper>.courseWrap>.courseListWrap {
+        width: 600px;
+    }
+
+    .courseWrapper>.courseWrap .courseFilterWrap>.courseList {
+        margin: 10px auto 0;
+    }
+    .companyAwardsWrapper>.companyAwardsWrap>.companyAwards,
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro {
+        margin: 40px auto 0;
+    }
+
+    .managementWrapper>.managementWrap>.d-flex,
+    .partnerWrapper>.partnerWrap>.partner {
+        margin: 0 auto;
+    }
+
+    .managementWrapper>.managementWrap>.d-flex>.management {
+        width: calc(50% - 20px);
+    }
+    
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro>.introWrap>.intro {
+        width: calc(50% - 40px);
+    }
+    .companyAwardsWrapper>.companyAwardsWrap>.companyAwards>.awards{
+        width: 280px;
+    } 
+
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt .h1,
+    .adBannerWrapper .adBannerWrap .adBanner .bannerTxt .bannerMainTxt {
+        /* font-size: 30px; */
+        font-size: 2.143rem;
+        line-height: 40px;
+    }
+
+    .textWrap>.h2 {
+        /* font-size: 20px; */
+        font-size: 1.429rem;
+    }
+
+    .textWrap>.fz20 {
+        /* font-size: 16px; */
+        font-size: 1.143rem;
+        line-height: 20px;
+        margin: 20px 0;
+    }
+
+    .container-courseDetail {
+        padding: 0 0 90px;
+    }
+
+    .scrollToTop {
+        bottom: 110px;
+    }
+    .footerWrap .footer_copyWrap .intro{
+        margin-top: 20px;
+    }
+}
+
+/*--------------------------------------------------------------
+  [2] 태블릿 768px - 1023px >> 기준 730px
+----------------------------------------------------------------*/
+@media(max-width:1024px) {
+    .headerWrap .mobileHide,
+    .subHeaderWrap{
+        display: none;
+    }  
+
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt>.d-flex,
+    .subSectionWrapper .subSectionWrap .subSection>.d-flex {
+        display: block;
+    }
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt>.d-flex.bannerBtnWrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .footerWrap .footer_menuWrap{
+        -webkit-box-lines: multiple;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .mainBackVideoWrap>.background_video {
+        height: 400px;
+    }
+    .headerWrap .header{
+        padding: 15px 0;
+    }
+    .container_rainbow>.content{
+        margin-top: 60px;
+    }
+    .container_rainbow>.course-list {
+        margin-top: 120px;
+    }
+    .addBannerWrapper {
+        margin-top: 120px;
+        position: inherit;
+    }
+
+    .courseContainer>.courseWrapper {
+        padding: 120px 0;
+    }
+
+    .courseWrapper>.courseWrap {
+        width: calc(100% - 40px);
+    }
+
+    .managementWrapper>.managementWrap>.d-flex {
+        /* font-size: 16px; */
+        font-size: 1.143rem;
+    }
+
+    .managementWrapper>.managementWrap>.d-flex>.management>.mainTxt {
+        line-height: 20px;
+    }
+
+    /* layout_main >> header */
+
+    .fullWrapper>.full-navGroup .menuDivWrap>.menu-title-division {
+        width: calc((100% / 2) - 20px);
+    }
+    .subSectionWrapper .subSectionWrap .subSection .sectionTxt {
+        margin-top: 40px;
+    }
+
+    .course-detail-container>.course-detailWrap{
+        width: 100%;
+        max-width: 790px;
+    }
+
+    .course-detail-container,
+    .subSectionWrapper .subSectionWrap .subSection>.d-flex{
+        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    }
+    .subSectionContainer .subSectionWrapper .subSectionTitle,
+    .subSectionWrapper .subSectionWrap .subSection .mainTxt,
+    .subSectionWrapper .subSectionWrap .subSection .sectionTxt{
+        text-align: center;
+    }
+
+    .resumeWrap .resumeSection {
+        display: block;
+    }
+    
+    .resumeSection .resumeFormWrap{
+        margin-top: 20px;
+    }
+
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt>.d-flex.bannerBtnWrap,
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex,
+    .companyAwardsWrapper>.companyAwardsWrap>.companyAwards {
+        -webkit-box-lines: multiple;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form20,
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form33 {
+        width: calc(33.3% - 10px);
+    }
+
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form25,
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form50 {
+        width: calc(50% - 10px);
+    }
+
+    .rsm_education .resumeForm.d-flex>.form80 {
+        width: calc(66.6% - 10px);
+    }
+
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form20:nth-child(3)~*,
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form33:nth-child(3)~*,
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form25:nth-child(2)~*,
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form50:nth-child(2)~* {
+        margin-top: 10px;
+    }
+
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt {
+        width: calc(100% - 320px);
+    }
+
+    .mainBannerWrapper .mainBanner .d-flex .bannerImg {
+        width: 300px;
+    }
+    .subSectionWrapper .subSectionWrap .subSection .mainTxt{
+        width: 100%;
+    }
+    .subSectionWrapper .subSectionWrap .subSection .sectionTxt .sectionImg,
+    .subSectionWrapper .subSection .section_tab{
+        margin: 40px auto 0;
+    }
+    .subBannerWrapper .subBannerWrap.community06-01{
+        min-width: 320px;
+        height: 200px;
+        padding-top: 0;
+        background-size: cover;
+        position: relative;
+    }
+    .subBannerWrapper .subBannerWrap .subBannerTxt{
+        min-width: 320px;
+        margin: auto;
+        height: fit-content;
+        line-height: 30px;
+    }
+}
+
+/*--------------------------------------------------------------
+  [3] 모바일  320px - 767px >> 기준 300px
+----------------------------------------------------------------*/
+@media(max-width:767px) {
+    .container_rainbow>.course-list,
+    .container_rainbow>.course-detail,
+    .container_rainbow>.content>.mainBackVideoWrap,
+    .addBannerWrapper {
+        margin-top: 60px;
+    }
+
+    .header,
+    .fullWrapper>.full-navGroup,
+    .subHeaderWrap>.subHeader,
+    .courseWrapper>.courseWrap,
+    .companyIntroWrapper>.companyIntroWrap,
+    .managementWrapper>.managementWrap,
+    .partnerWrapper>.partnerWrap,
+    .adBannerWrapper,
+    .footerWrap>.footer,
+    .detail-menuWrapper>.d-flex,
+    .course-detail-container,
+    .course-navWrap>.d-flex,
+    .sub-content,
+    .course-applyContainer .fullWrapper>.full-navGroup .menuDivWrap>.menu-title-division,
+    .section_search,
+    .section_table,
+    .section_view,
+    .section_tab,
+    .section_map,
+    .section_pagination,
+    .section_formStyle,
+    .section_btnWrap,
+    .promotionBanner{
+        width: calc(100% - 20px);
+        margin: 0 auto;
+    }
+    .companyAwardsWrapper>.companyAwardsWrap>.companyAwards,
+    .mainBackVideoWrap>.background_video>.opacity_bg>.bannerTextWrap,
+    .mainBannerWrapper .mainBanner a>.d-flex {
+        width: calc(100% - 20px);
+    }
+
+    .footerWrap>.footer,
+    .resumeWrap .resumeTitle,
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex,
+    .rsmForm_address,
+    .rsm_profile .resumeForm>.rsmForm_address>.rsm_txt .d-flex,
+    .mainBannerWrapper .mainBanner a>.d-flex,
+    .mainBannerWrapper .mainBanner>.d-flex,
+    .adBannerWrapper .adBannerWrap .adBanner>a>.d-flex {
+        display: block;
+    }
+
+    .subHeaderWrap,
+    .swiper-button-next,
+    .swiper-button-prev,
+    .swiper-pagination,
+    .footerWrap .footer_navWrap,
+    .mainBackVideoWrap>.background_video>.opacity_bg>.bannerTextWrap>p.op06,
+    .mainBannerWrapper .mainBanner .floatingBtn {
+        display: none;
+    }
+
+    .courseContainer>.courseWrapper,
+    .courseWrapper>.courseWrap,
+    .companyIntroWrapper>.companyIntroWrap,
+    .managementWrapper>.managementWrap,
+    .partnerWrapper>.partnerWrap {
+        padding: 60px 0;
+    }
+
+    
+    .courseWrapper>.fullBannerWrapper {
+        margin: 60px 0 0;
+    }
+
+    .course-list .fullBannerWrapper {
+        margin: 0 0 60px;
+    }
+
+    .courseWrapper>.courseWrap .courseFilterWrap>.courseList,
+    .managementWrapper>.managementWrap>.d-flex,
+    .partnerWrapper>.partnerWrap>.partner,
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro,
+    .courseWrapper>.courseWrap>.courseListWrap {
+        width: 300px;
+    }
+
+    .courseWrapper>.courseWrap .courseFilterWrap>.courseList>li>a>.courseImg {
+        min-height: calc((300px / 3) * 2);
+    }
+
+    .course-detail-container>.course-detailWrap,
+    .course-applyContainer>.resumeSection,
+    .mainBannerWrapper,
+    .subSectionWrapper .subSection .section_tab,
+    .subSectionWrapper .subSectionWrap .subSection .sectionTxt .sectionImg{
+        width: 100%;
+        min-width: 320px;
+    }
+
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form20,
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form25,
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form33,
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form50,
+    .resumeWrap .resumeSection .resumeFormWrap .resumeForm.d-flex>.form80,
+    .rsm_profile .resumeFormWrap>.resumeForm>.resumeForm_text>.rsm_input>.rsm_radio:last-child,
+    .rsm_profile .resumeForm>.rsmForm_address>.rsm_txt,
+    .rsm_profile .resumeForm>.rsmForm_address>.rsm_txt .d-flex .rsm_input,
+    .resumeForm_text.form100,
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt,
+    .mainBannerWrapper .mainBanner .d-flex .bannerImg,
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro>.introWrap>.intro,
+    .managementWrapper>.managementWrap>.d-flex>.management {
+        width: 100%;
+    }
+
+    .resumeForm_text {
+        margin: 10px 0;
+    }
+
+    .container_rainbow>.content>.mainBackVideoWrap,
+    .courseWrapper>.courseWrap .courseFilterWrap>.courseTitle,
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt>.d-flex.bannerBtnWrap,
+    .companyAwardsWrapper>.companyAwardsWrap>.companyAwards,
+    .adBannerWrapper .adBannerWrap .adBanner .bannerTxt>.d-flex{
+        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    }
+
+    .mainBackVideoWrap>.background_video {
+        height: 170px;
+    }
+
+    .textWrap>.fz20,
+    .mainBackVideoWrap>.background_video>.opacity_bg>.bannerTextWrap {
+        /* font-size: 14px; */
+        font-size: 1rem;
+        line-height: 20px;
+        height: 100px;
+    }
+
+    .textWrap>.h2,
+    .mainBackVideoWrap>.background_video>.opacity_bg>.bannerTextWrap>.h2,
+    .resumeHeader>.h2 {
+        /* font-size: 16px; */
+        font-size: 1.429rem;
+        line-height: 30px;
+    }
+
+    .mainBackVideoWrap>.background_video>.opacity_bg>.bannerTextWrap>.margin-top20 {
+        margin-top: 10px;
+    }
+
+
+    .courseWrapper>.courseWrap>.courseListWrap>.course {
+        max-width: 285px;
+    }
+
+    .courseWrapper>.courseWrap .courseFilterWrap>.courseTitle {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+
+    .courseWrapper>.courseWrap .courseFilterWrap>.courseTitle>.img-icon {
+        margin: 0 10px 0 0;
+    }
+
+    .course-teacher>.course-tcImg {
+        width: 40px;
+        height: 40px;
+        background-position: -120px -180px;
+    }
+
+    .course-teacher>.course-tcTxtWrap {
+        width: calc(100% - 60px);
+    }
+
+    .resumeHeader>.resumeMsg {
+        text-align: left;
+    }
+
+    .resumeSection .resumeWrap {
+        margin: 60px 0;
+    }
+
+    .resumeWrap .resumeTitle .h3 {
+        margin-right: 0;
+    }
+
+    .resumeWrap .resumeTitle p {
+        margin-top: 10px;
+    }
+
+    .resumeFormWrap>.resumeForm>.resumeForm_text>.rsm_input.d-flex>.rsm_radio {
+        margin-right: 0;
+        margin: 0 5px;
+    }
+
+    .rsm_profile .resumeForm>.rsmForm_address>.searchAddressBtn {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        margin: 10px auto 0;
+    }
+
+    .rsm_introduction .resumeForm>.rsm_textarea {
+        margin: 0;
+    }
+
+    .rsm_evidence .resumeFormWrapper>.resumeForm_noticeWrap {
+        top: -102px;
+    }
+
+    .rsm_evidence .resumeFormWrapper>.resumeForm_noticeWrap>.resumeForm_notice {
+        width: calc(100% - 30px);
+    }
+
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt,
+    .adBannerWrapper .adBannerWrap .adBanner .bannerTxt{
+        text-align: center;
+    }
+    .adBannerWrapper .adBannerWrap .adBanner .bannerImg{
+        margin-top: 20px;
+    }
+    .mainBannerWrapper .mainBanner .d-flex .bannerImg img {
+        margin: auto;
+        top: auto;
+        bottom: auto;
+        left: 0;
+        right: 0;
+    }
+    .adBannerWrapper .adBannerWrap .adBanner .bannerImg img{
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+
+@media(max-width:590px) {
+
+    .course-reviewWrap>.course-review,
+    .course-infoTable>.d-flex,
+    .subSectionWrapper .subSectionWrap .subSection .sectionTxt .sectionImg .companyAwards,
+    .footerWrap .footer_textWrap{
+        display: block;
+    }
+
+    .processWrap,
+    .addKakaoBanner>.d-flex>.textWrap>p,
+    .mainBannerWrapper .mainBanner .mobileHide,
+    .adBanner .mobileHide,
+    .footerWrap .footer_menuWrap{
+        display: none;
+    }
+
+    .course-curriculumWrap>.curriculum>.curriculum-boxWrap,
+    .recommendContainer .recommendWrapper .recommendWrap {
+        -webkit-box-lines: multiple;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .course-infoTable>.d-flex>.infoTh {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    .recommendContainer .recommendWrapper .recommendWrap,
+    .course-section .courseList,
+    .courseWrapper>.courseWrap>.courseListWrap,
+    .partnerWrapper>.partnerWrap>.partner,
+    .subSectionWrapper .subSectionWrap .subSection .sectionTxt .sectionImg .companyAwards,
+    .subSectionWrapper .subSectionWrap .subSection .class_bodyWrap .courseFilterWrap .courseList,
+    .footerWrap .footer_snsWrap {
+        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    }
+
+    .header,
+    .fullWrapper>.full-navGroup,
+    .subHeaderWrap>.subHeader,
+    .courseWrapper>.courseWrap,
+    .companyIntroWrapper>.companyIntroWrap,
+    .managementWrapper>.managementWrap,
+    .partnerWrapper>.partnerWrap,
+    .adBannerWrapper,
+    .footerWrap>.footer,
+    .mainBackVideoWrap>.background_video>.opacity_bg>.bannerTextWrap,
+    .detail-menuWrapper>.d-flex,
+    .course-detail-container,
+    .course-navWrap>.d-flex,
+    .sub-content,
+    .course-applyContainer .fullWrapper>.full-navGroup .menuDivWrap>.menu-title-division,
+    .section_search,
+    .section_table,
+    .section_view,
+    .section_tab,
+    .section_map,
+    .section_pagination,
+    .section_formStyle,
+    .section_btnWrap,
+    .recommendContainer .recommendWrapper {
+        width: calc(100% - 20px);
+        min-width: 280px;
+    }
+
+
+    .courseWrapper>.courseWrap>.courseListWrap,
+    .recommendContainer .recommendWrapper .recommendWrap,
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro>.introWrap>.intro,
+    .partnerWrapper>.partnerWrap>.partner,
+    .managementWrapper>.managementWrap>.d-flex>.management,
+    .course-reviewWrap>.course-review>.course-rvTxtWrap,
+    .sub-content>.section_formStyle,
+    .sub-content>.section_btnWrap {
+        width: 100%;
+        min-width: 300px;
+    }
+   
+    .managementWrapper>.managementWrap>.d-flex,
+    .partnerWrapper>.partnerWrap>.partner,
+    .subSectionWrapper .subSectionWrap .subSection .sectionTxt .sectionImg .companyAwards .awards {
+        width: 320px;
+    }
+    .subSectionWrapper .subSectionWrap .subSection .sectionTxt .sectionImg .companyAwards .awards{
+        height: 160px;
+    }
+    .subSectionWrapper .subSectionWrap .subSection .sectionTxt .sectionImg .companyAwards .awards img{
+        height: calc(100% - 20px);
+    }
+
+    .course-curriculumWrap>.curriculum>.curriculum-boxWrap>.curriculum-box:nth-child(1)~*,
+    .course-reviewWrap>.course-review>.course-rvTxtWrap {
+        margin-left: 0;
+    }
+    .recommendContainer .recommendWrapper .recommendWrap .recommendMain{
+        margin-right: 0;
+    }
+    .recommendContainer .recommendWrapper .recommendWrap .course_recommend,
+    .course-reviewWrap>.course-review>.course-rvTxtWrap,
+    .footerWrap .footer_snsWrap {
+        margin-top: 20px;
+    }
+
+    .companyIntroWrapper>.companyIntroWrap>.companyIntro>.introWrap>.intro {
+        margin: 10px 0;
+    }
+
+    .w150 {
+        width: 25%
+    }
+
+    .w200 {
+        width: 33.3%
+    }
+
+    .w300 {
+        width: 50%;
+    }
+
+    .fullWrapper>.full-navGroup .menuDivWrap>.menu-title-division {
+        width: 100%;
+    }
+    .mainBannerWrapper .mainBanner .bannerBtn{
+        width: calc(50% - 10px);
+    }
+    .course-infoTable>.d-flex>.infoTd {
+        background-color: #eee;
+    }
+
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt .h2,
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt .h3,
+    .class_headerWrap .class_header,
+    .tab_headerWrap .tab_header {
+        /* font-size: 14px; */
+        font-size: 1rem;
+        line-height: 20px;
+    }
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt .fz40,
+    .mainBannerWrapper .mainBanner .d-flex .bannerTxt .h1 {
+        /* font-size: 20px; */
+        font-size: 1.429rem;
+        line-height: 30px;
+    }
+    .recommendContainer .recommendWrapper .textWrap{
+        text-align: center;
+        line-height: 30px;
+    }
+    .adBannerWrapper .adBannerWrap .adBanner>a>.d-flex{
+        margin: 20px;
+    }
+    .subSectionWrapper .subSectionWrap .subSection .sectionTxt .sectionImg .companyAwards .awards{
+        margin: 10px auto;
+    }
+    .footer_logoWrap img{
+        margin: 0 auto;
+        display: block;
+    }
+    .footer_textWrap{
+        text-align: center;
+    }
+}

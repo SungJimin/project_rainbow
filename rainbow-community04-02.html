@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <? include 'include/rainbow_head.html' ?>
+   
+    <!-- 기존 레인보우사이트 text/javascript 복사 -->
+    <!-- <script type="text/javascript">
+	    $(document).ready(function() {
+			$("#btnWrite").click(function() {
+				// 페이지 주소 변경(이동)
+				location.href = "/board/write.do";
+			});
+	
+		});
+	
+		function goToNear(seq, nearType) {
+			location.href = "/smtp/community/sub04-05-01.do?seq=" + seq + "&searchOption=" + nearType;
+		}
+	
+		function goToList() {
+			location.href = "/smtp/community/sub04-05.do";
+		}
+    </script> -->
+</head>
+
+<body>
+    <!-- community - 04. 졸업생 마당 >> 게시글 보기 -->
+    <div class="container_rainbow">
+        <? include 'include/rainbow_header.html' ?>
+        <div class="content course-point05" id="main">
+            <div class="sub-content community01-02">
+                <div class="section_header">
+                    <h3 class="h3">🌈 졸업생 마당</h3>
+                </div>
+                <div class="section_view">
+                    <div class="view_title bgc_eee">
+                        ${boardDetail.board_content_title}
+                    </div>
+                    <ul class="view_info margin-top10 d-flex justify_end">
+                        <li>
+                            <strong>게시자&nbsp;</strong>
+                            admin
+                            <!-- ${boardDetail.board_content_nm } -->
+                        </li>
+                        <li>
+                            <strong>날짜&nbsp;</strong>
+                            2021-07-13
+                            <!-- ${boardDetail.board_content_udt_dt } -->
+                        </li>
+                        <li>
+                            <strong>조회수&nbsp;</strong>
+                            61
+                            <!-- ${boardDetail.board_content_hit } -->
+                        </li>
+                    </ul>
+                    
+                    <div class="view_content">
+                        <div class="view_image imageContent">
+                            <!-- 이미지 삽입 -->
+                            <img src="img/banner_thumb03.jpg" alt="">
+                        </div>
+                        <!-- 내용 삽입 -->
+                        ${boardDetail.board_content_ct }
+                    </div>
+                    <c:if test="${fn:length(files) gt 0}">
+                        <div class="view_fileUpload">
+                            <p class="fc_999">
+                                첨부파일
+                            </p>
+                            <div class="margin-top10">
+                                <a
+                                    href="/file_download?origin=${data.board_file_origin}&saved=${data.board_file_saved}&path=${path}">${data.board_file_origin}</a>
+                            </div>
+                        </div>
+                        </c:forEach>
+                    </c:if>
+                </div>
+                <div class="section_btnWrap d-flex justify_center">
+                    <c:if test="${boardDetail.board_content_seq_min != boardDetail.board_content_seq}">
+                        <input type="button" class="btn_default btn_medium btn_pp btn-agree btn-wh"
+                            onclick="goToNear('${boardDetail.board_content_seq}' ,'previous')" name="" value="이전글">
+                    </c:if>
+                    <input type="button" class="btn_default btn_medium margin-left20 bgc_eee" onclick="goToList()"
+                        name="" value="목록">
+                    <c:if test="${boardDetail.board_content_seq_max != boardDetail.board_content_seq}">
+                        <input type="button" class="btn_default btn_medium margin-left20"
+                            onclick="goToNear('${boardDetail.board_content_seq}', 'next')" name="" value="다음글">
+                    </c:if>
+                </div>
+
+
+            </div>
+        </div>
+        <? include 'include/rainbow_footer.html' ?>
+    </div>
+
+</body>
+<script type="text/javascript">
+    // community nav active
+    navLinks[4].parentElement.classList.add('current')
+    subNav[4].classList.add('active');
+ </script>
+
+</html>
